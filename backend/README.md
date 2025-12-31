@@ -2,6 +2,15 @@
 
 سیستم هوشمند مدیریت مربیگری ورزشی - Backend API
 
+## 📊 آمار دیتابیس
+
+| دسته | تعداد رکورد | دسته‌بندی |
+|------|-------------|----------|
+| 🍎 غذاها | 254 | 9 |
+| 🏋️ تمرینات | 281 | 10 گروه عضلانی |
+| 💊 مکمل‌ها | 124 | 16 |
+| **مجموع** | **659** | **35** |
+
 ## 🚀 ویژگی‌ها
 
 - ✅ **FastAPI** - فریمورک مدرن و سریع
@@ -103,8 +112,15 @@ backend/
 │   └── db/                  # دیتابیس
 │       ├── base.py
 │       ├── session.py
-│       └── init_db.py
+│       ├── init_db.py
+│       └── migrate_data.py  # اسکریپت مهاجرت
 │
+├── data/                    # داده‌های JSON
+│   ├── foods.json          # 254 غذا
+│   ├── exercises.json      # 281 تمرین
+│   └── supplements.json    # 124 مکمل
+│
+├── flexpro.db              # دیتابیس SQLite
 ├── requirements.txt
 ├── run.py
 └── README.md
@@ -159,11 +175,30 @@ backend/
 pytest
 ```
 
-### Migration دیتابیس
+### Migration دیتابیس (Alembic)
 
 ```bash
 alembic revision --autogenerate -m "description"
 alembic upgrade head
+```
+
+### Migration داده‌ها از JSON
+
+```bash
+# مهاجرت کامل تمام داده‌ها
+python -m app.db.migrate_data
+
+# فقط غذاها
+python -m app.db.migrate_data --foods-only
+
+# فقط تمرینات
+python -m app.db.migrate_data --exercises-only
+
+# فقط مکمل‌ها
+python -m app.db.migrate_data --supplements-only
+
+# پاک کردن و مهاجرت مجدد
+python -m app.db.migrate_data --reset
 ```
 
 ## 📝 نکات مهم
