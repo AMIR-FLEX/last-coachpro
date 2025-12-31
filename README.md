@@ -1,16 +1,53 @@
-# React + Vite
+# Last Coach Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+یک اپلیکیشن React برای مدیریت برنامه‌های تمرینی، تغذیه و مکمل‌های ورزشی.
 
-Currently, two official plugins are available:
+## ویژگی‌ها
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🏋️ مدیریت برنامه‌های تمرینی (Training)
+- 🥗 مدیریت برنامه‌های تغذیه (Diet)
+- 💊 مدیریت مکمل‌ها (Supplements)
+- 👤 مدیریت پروفایل کاربران
+- 📊 نمایش آمار و گزارشات
 
-## React Compiler
+## تکنولوژی‌ها
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - کتابخانه UI
+- **Vite** - Build tool و dev server
+- **Tailwind CSS** - استایل‌دهی
+- **Framer Motion** - انیمیشن‌ها
+- **Chart.js** - نمودارها
+- **SweetAlert2** - Alert های زیبا
+- **html2canvas & jsPDF** - چاپ و PDF
 
-## Expanding the ESLint configuration
+## نصب و راه‌اندازی
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# نصب dependencies
+npm install
+
+# اجرای پروژه در حالت development
+npm run dev
+
+# ساخت production build
+npm run build
+```
+
+## اسکریپت‌های مفید
+
+- `update-github.bat` - آپدیت خودکار پروژه در GitHub
+- `update-github.ps1` - نسخه PowerShell برای آپدیت GitHub
+
+## ساختار پروژه
+
+```
+src/
+├── components/     # کامپوننت‌های React
+├── context/        # Context API
+├── data/          # داده‌های تمرینی و تغذیه
+└── assets/        # تصاویر و فایل‌های استاتیک
+```
+
+## لایسنس
+
+این پروژه یک پروژه خصوصی است.
