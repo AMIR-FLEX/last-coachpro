@@ -1,0 +1,256 @@
+{
+  "categories": [
+    {
+      "name": "پروتئین‌ها",
+      "name_en": "Proteins",
+      "icon": "🥤",
+      "sort_order": 1,
+      "supplements": [
+        {"name": "پروتئین وی", "name_en": "Whey Protein", "type": "powder", "timing": ["بعد از تمرین", "صبحانه"]},
+        {"name": "پروتئین وی ایزوله", "name_en": "Whey Isolate", "type": "powder", "timing": ["بعد از تمرین"]},
+        {"name": "پروتئین وی کنسانتره", "name_en": "Whey Concentrate", "type": "powder", "timing": ["بعد از تمرین", "صبحانه"]},
+        {"name": "پروتئین وی هیدرولیزه", "name_en": "Whey Hydrolysate", "type": "powder", "timing": ["بعد از تمرین"]},
+        {"name": "پروتئین کازئین", "name_en": "Casein Protein", "type": "powder", "timing": ["قبل از خواب"]},
+        {"name": "پروتئین کازئین میسلار", "name_en": "Micellar Casein", "type": "powder", "timing": ["قبل از خواب"]},
+        {"name": "پروتئین تخم مرغ", "name_en": "Egg Protein", "type": "powder", "timing": ["بعد از تمرین", "صبحانه"]},
+        {"name": "پروتئین گوشت", "name_en": "Beef Protein", "type": "powder", "timing": ["بعد از تمرین"]},
+        {"name": "پروتئین سویا", "name_en": "Soy Protein", "type": "powder", "timing": ["بعد از تمرین", "صبحانه"]},
+        {"name": "پروتئین نخود", "name_en": "Pea Protein", "type": "powder", "timing": ["بعد از تمرین", "صبحانه"]},
+        {"name": "پروتئین برنج", "name_en": "Rice Protein", "type": "powder", "timing": ["بعد از تمرین"]},
+        {"name": "پروتئین کنف", "name_en": "Hemp Protein", "type": "powder", "timing": ["صبحانه"]},
+        {"name": "پروتئین گیاهی ترکیبی", "name_en": "Plant Blend", "type": "powder", "timing": ["بعد از تمرین", "صبحانه"]},
+        {"name": "گینر", "name_en": "Mass Gainer", "type": "powder", "timing": ["بعد از تمرین", "بین وعده‌ها"]},
+        {"name": "گینر کم‌قند", "name_en": "Low-Sugar Mass Gainer", "type": "powder", "timing": ["بعد از تمرین"]},
+        {"name": "گینر پرکربوهیدرات", "name_en": "High-Carb Mass Gainer", "type": "powder", "timing": ["بعد از تمرین"]}
+      ]
+    },
+    {
+      "name": "کراتین",
+      "name_en": "Creatine",
+      "icon": "⚡",
+      "sort_order": 2,
+      "supplements": [
+        {"name": "کراتین مونوهیدرات", "name_en": "Creatine Monohydrate", "type": "powder", "timing": ["هر زمان", "بعد از تمرین"]},
+        {"name": "کراتین اتیل استر", "name_en": "Creatine Ethyl Ester", "type": "capsule", "timing": ["هر زمان"]},
+        {"name": "کراتین هیدروکلراید", "name_en": "Creatine HCl", "type": "powder", "timing": ["قبل از تمرین"]},
+        {"name": "کراتین بافر شده", "name_en": "Buffered Creatine", "type": "capsule", "timing": ["هر زمان"]},
+        {"name": "کراتین مایکرو", "name_en": "Micronized Creatine", "type": "powder", "timing": ["هر زمان"]},
+        {"name": "کراتین مایع", "name_en": "Liquid Creatine", "type": "liquid", "timing": ["قبل از تمرین"]}
+      ]
+    },
+    {
+      "name": "آمینو اسیدها",
+      "name_en": "Amino Acids",
+      "icon": "🧬",
+      "sort_order": 3,
+      "supplements": [
+        {"name": "BCAA", "name_en": "BCAA", "type": "powder", "timing": ["حین تمرین", "بعد از تمرین"]},
+        {"name": "BCAA 2:1:1", "name_en": "BCAA 2:1:1", "type": "powder", "timing": ["حین تمرین"]},
+        {"name": "BCAA 4:1:1", "name_en": "BCAA 4:1:1", "type": "powder", "timing": ["حین تمرین"]},
+        {"name": "BCAA 8:1:1", "name_en": "BCAA 8:1:1", "type": "powder", "timing": ["حین تمرین"]},
+        {"name": "EAA", "name_en": "EAA", "type": "powder", "timing": ["حین تمرین", "بعد از تمرین"]},
+        {"name": "گلوتامین", "name_en": "Glutamine", "type": "powder", "timing": ["بعد از تمرین", "قبل از خواب"]},
+        {"name": "آرژنین", "name_en": "L-Arginine", "type": "powder", "timing": ["قبل از تمرین"]},
+        {"name": "سیترولین", "name_en": "Citrulline", "type": "powder", "timing": ["قبل از تمرین"]},
+        {"name": "سیترولین مالات", "name_en": "Citrulline Malate", "type": "powder", "timing": ["قبل از تمرین"]},
+        {"name": "تائورین", "name_en": "Taurine", "type": "powder", "timing": ["قبل از تمرین"]},
+        {"name": "گلیسین", "name_en": "Glycine", "type": "powder", "timing": ["قبل از خواب"]},
+        {"name": "بتا آلانین", "name_en": "Beta-Alanine", "type": "powder", "timing": ["قبل از تمرین"]},
+        {"name": "HMB", "name_en": "HMB", "type": "capsule", "timing": ["قبل از تمرین", "بعد از تمرین"]},
+        {"name": "لوسین", "name_en": "Leucine", "type": "powder", "timing": ["با وعده غذایی"]}
+      ]
+    },
+    {
+      "name": "پری و پست ورک‌اوت",
+      "name_en": "Pre & Post Workout",
+      "icon": "🏋️",
+      "sort_order": 4,
+      "supplements": [
+        {"name": "پری ورک‌اوت", "name_en": "Pre-Workout", "type": "powder", "timing": ["30 دقیقه قبل از تمرین"]},
+        {"name": "پری ورک‌اوت بدون کافئین", "name_en": "Stim-Free Pre-Workout", "type": "powder", "timing": ["30 دقیقه قبل از تمرین"]},
+        {"name": "پری ورک‌اوت با کافئین بالا", "name_en": "High-Caffeine Pre-Workout", "type": "powder", "timing": ["30 دقیقه قبل از تمرین"]},
+        {"name": "پست ورک‌اوت", "name_en": "Post-Workout", "type": "powder", "timing": ["بلافاصله بعد از تمرین"]},
+        {"name": "ریکاوری", "name_en": "Recovery", "type": "powder", "timing": ["بعد از تمرین"]}
+      ]
+    },
+    {
+      "name": "ویتامین‌ها و مینرال‌ها",
+      "name_en": "Vitamins & Minerals",
+      "icon": "💊",
+      "sort_order": 5,
+      "supplements": [
+        {"name": "مولتی ویتامین مینرال", "name_en": "Multivitamin Mineral", "type": "tablet", "timing": ["با صبحانه"]},
+        {"name": "مولتی ویتامین مردان", "name_en": "Men's Multivitamin", "type": "tablet", "timing": ["با صبحانه"]},
+        {"name": "مولتی ویتامین زنان", "name_en": "Women's Multivitamin", "type": "tablet", "timing": ["با صبحانه"]},
+        {"name": "مولتی ویتامین ورزشکاران", "name_en": "Sport Multivitamin", "type": "tablet", "timing": ["با صبحانه"]},
+        {"name": "ویتامین D3", "name_en": "Vitamin D3", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "ویتامین D3 + K2", "name_en": "Vitamin D3 + K2", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "ویتامین C", "name_en": "Vitamin C", "type": "tablet", "timing": ["هر زمان"]},
+        {"name": "ویتامین E", "name_en": "Vitamin E", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "ویتامین B کمپلکس", "name_en": "Vitamin B Complex", "type": "tablet", "timing": ["با صبحانه"]},
+        {"name": "ویتامین B12", "name_en": "Vitamin B12", "type": "tablet", "timing": ["صبح"]},
+        {"name": "زینک", "name_en": "Zinc", "type": "tablet", "timing": ["با غذا"]},
+        {"name": "زینک پیکولینات", "name_en": "Zinc Picolinate", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "منیزیم", "name_en": "Magnesium", "type": "tablet", "timing": ["قبل از خواب"]},
+        {"name": "منیزیم گلیسینات", "name_en": "Magnesium Glycinate", "type": "capsule", "timing": ["قبل از خواب"]},
+        {"name": "منیزیم سیترات", "name_en": "Magnesium Citrate", "type": "capsule", "timing": ["قبل از خواب"]},
+        {"name": "آهن", "name_en": "Iron", "type": "tablet", "timing": ["با معده خالی"]},
+        {"name": "کلسیم", "name_en": "Calcium", "type": "tablet", "timing": ["با غذا"]},
+        {"name": "سلنیوم", "name_en": "Selenium", "type": "tablet", "timing": ["با غذا"]},
+        {"name": "کروم", "name_en": "Chromium", "type": "tablet", "timing": ["با غذا"]}
+      ]
+    },
+    {
+      "name": "چربی‌های سالم",
+      "name_en": "Healthy Fats",
+      "icon": "🐟",
+      "sort_order": 6,
+      "supplements": [
+        {"name": "امگا 3", "name_en": "Omega-3", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "روغن ماهی", "name_en": "Fish Oil", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "روغن کریل", "name_en": "Krill Oil", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "DHA", "name_en": "DHA", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "EPA", "name_en": "EPA", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "CLA", "name_en": "CLA", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "MCT Oil", "name_en": "MCT Oil", "type": "liquid", "timing": ["صبح", "قبل از تمرین"]}
+      ]
+    },
+    {
+      "name": "چربی سوزها",
+      "name_en": "Fat Burners",
+      "icon": "🔥",
+      "sort_order": 7,
+      "supplements": [
+        {"name": "ال-کارنیتین", "name_en": "L-Carnitine", "type": "liquid", "timing": ["قبل از تمرین", "صبح"]},
+        {"name": "ال-کارنیتین ال-تارتارات", "name_en": "L-Carnitine L-Tartrate", "type": "capsule", "timing": ["قبل از تمرین"]},
+        {"name": "گرین تی اکسید", "name_en": "Green Tea Extract", "type": "capsule", "timing": ["صبح", "قبل از تمرین"]},
+        {"name": "کافئین", "name_en": "Caffeine", "type": "tablet", "timing": ["صبح", "قبل از تمرین"]},
+        {"name": "یوهیمبین", "name_en": "Yohimbine", "type": "capsule", "timing": ["صبح با معده خالی"]},
+        {"name": "سینفرین", "name_en": "Synephrine", "type": "capsule", "timing": ["صبح"]},
+        {"name": "ال-تیروزین", "name_en": "L-Tyrosine", "type": "capsule", "timing": ["صبح", "قبل از تمرین"]}
+      ]
+    },
+    {
+      "name": "تقویت‌کننده‌های هورمونی",
+      "name_en": "Hormone Support",
+      "icon": "💪",
+      "sort_order": 8,
+      "supplements": [
+        {"name": "تریبولوس", "name_en": "Tribulus", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "فنوگریک", "name_en": "Fenugreek", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "اشواگاندا", "name_en": "Ashwagandha", "type": "capsule", "timing": ["صبح", "قبل از خواب"]},
+        {"name": "جینسنگ", "name_en": "Ginseng", "type": "capsule", "timing": ["صبح"]},
+        {"name": "مکا", "name_en": "Maca", "type": "powder", "timing": ["صبح"]},
+        {"name": "DHEA", "name_en": "DHEA", "type": "capsule", "timing": ["صبح"]},
+        {"name": "D-آسپارتیک اسید", "name_en": "D-Aspartic Acid", "type": "powder", "timing": ["صبح"]}
+      ]
+    },
+    {
+      "name": "گوارش و آنزیم‌ها",
+      "name_en": "Digestion & Enzymes",
+      "icon": "🦠",
+      "sort_order": 9,
+      "supplements": [
+        {"name": "پروبیوتیک", "name_en": "Probiotic", "type": "capsule", "timing": ["با معده خالی"]},
+        {"name": "پریبیوتیک", "name_en": "Prebiotic", "type": "powder", "timing": ["هر زمان"]},
+        {"name": "آنزیم‌های گوارشی", "name_en": "Digestive Enzymes", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "بروملین", "name_en": "Bromelain", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "لاکتاز", "name_en": "Lactase", "type": "tablet", "timing": ["با لبنیات"]}
+      ]
+    },
+    {
+      "name": "کلاژن و مفاصل",
+      "name_en": "Collagen & Joints",
+      "icon": "🦴",
+      "sort_order": 10,
+      "supplements": [
+        {"name": "کلاژن", "name_en": "Collagen", "type": "powder", "timing": ["صبح", "قبل از خواب"]},
+        {"name": "کلاژن هیدرولیزه", "name_en": "Hydrolyzed Collagen", "type": "powder", "timing": ["صبح"]},
+        {"name": "کلاژن نوع 1", "name_en": "Type 1 Collagen", "type": "powder", "timing": ["صبح"]},
+        {"name": "کلاژن نوع 2", "name_en": "Type 2 Collagen", "type": "capsule", "timing": ["با معده خالی"]},
+        {"name": "گلوکوزامین", "name_en": "Glucosamine", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "کندرویتین", "name_en": "Chondroitin", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "MSM", "name_en": "MSM", "type": "powder", "timing": ["با غذا"]},
+        {"name": "هیالورونیک اسید", "name_en": "Hyaluronic Acid", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "کورکومین", "name_en": "Curcumin", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "زردچوبه", "name_en": "Turmeric", "type": "capsule", "timing": ["با غذا"]}
+      ]
+    },
+    {
+      "name": "خواب و آرامش",
+      "name_en": "Sleep & Relaxation",
+      "icon": "😴",
+      "sort_order": 11,
+      "supplements": [
+        {"name": "ملاتونین", "name_en": "Melatonin", "type": "tablet", "timing": ["30 دقیقه قبل از خواب"]},
+        {"name": "گلیسین", "name_en": "Glycine", "type": "powder", "timing": ["قبل از خواب"]},
+        {"name": "ال-تریپتوفان", "name_en": "L-Tryptophan", "type": "capsule", "timing": ["قبل از خواب"]},
+        {"name": "5-HTP", "name_en": "5-HTP", "type": "capsule", "timing": ["قبل از خواب"]},
+        {"name": "والرین", "name_en": "Valerian", "type": "capsule", "timing": ["قبل از خواب"]},
+        {"name": "کامومیل", "name_en": "Chamomile", "type": "tea", "timing": ["قبل از خواب"]},
+        {"name": "لاوندر", "name_en": "Lavender", "type": "capsule", "timing": ["قبل از خواب"]}
+      ]
+    },
+    {
+      "name": "انرژی و استقامت",
+      "name_en": "Energy & Endurance",
+      "icon": "⚡",
+      "sort_order": 12,
+      "supplements": [
+        {"name": "کوآنزیم Q10", "name_en": "CoQ10", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "ریبوز", "name_en": "Ribose", "type": "powder", "timing": ["قبل از تمرین"]},
+        {"name": "کافئین", "name_en": "Caffeine", "type": "tablet", "timing": ["صبح", "قبل از تمرین"]}
+      ]
+    },
+    {
+      "name": "آنتی‌اکسیدان‌ها",
+      "name_en": "Antioxidants",
+      "icon": "🍇",
+      "sort_order": 13,
+      "supplements": [
+        {"name": "رسوراترول", "name_en": "Resveratrol", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "آلفا لیپوئیک اسید", "name_en": "Alpha Lipoic Acid", "type": "capsule", "timing": ["با غذا"]},
+        {"name": "گلوتاتیون", "name_en": "Glutathione", "type": "capsule", "timing": ["با معده خالی"]},
+        {"name": "آستاگزانتین", "name_en": "Astaxanthin", "type": "softgel", "timing": ["با غذا"]},
+        {"name": "کوئرستین", "name_en": "Quercetin", "type": "capsule", "timing": ["با غذا"]}
+      ]
+    },
+    {
+      "name": "الکترولیت‌ها",
+      "name_en": "Electrolytes",
+      "icon": "💧",
+      "sort_order": 14,
+      "supplements": [
+        {"name": "الکترولیت", "name_en": "Electrolyte", "type": "powder", "timing": ["حین تمرین"]},
+        {"name": "سدیم", "name_en": "Sodium", "type": "tablet", "timing": ["حین تمرین"]},
+        {"name": "پتاسیم", "name_en": "Potassium", "type": "tablet", "timing": ["با غذا"]}
+      ]
+    },
+    {
+      "name": "فیبر",
+      "name_en": "Fiber",
+      "icon": "🌾",
+      "sort_order": 15,
+      "supplements": [
+        {"name": "پسیلیوم", "name_en": "Psyllium", "type": "powder", "timing": ["قبل از غذا"]},
+        {"name": "گلوکومانان", "name_en": "Glucomannan", "type": "capsule", "timing": ["30 دقیقه قبل از غذا"]},
+        {"name": "اینولین", "name_en": "Inulin", "type": "powder", "timing": ["هر زمان"]},
+        {"name": "فیبر محلول", "name_en": "Soluble Fiber", "type": "powder", "timing": ["با غذا"]},
+        {"name": "فیبر نامحلول", "name_en": "Insoluble Fiber", "type": "powder", "timing": ["با غذا"]}
+      ]
+    },
+    {
+      "name": "سایر",
+      "name_en": "Other",
+      "icon": "📦",
+      "sort_order": 16,
+      "supplements": [
+        {"name": "NAC", "name_en": "NAC", "type": "capsule", "timing": ["با معده خالی"]},
+        {"name": "کولین", "name_en": "Choline", "type": "capsule", "timing": ["با صبحانه"]},
+        {"name": "اینوزیتول", "name_en": "Inositol", "type": "powder", "timing": ["هر زمان"]},
+        {"name": "PQQ", "name_en": "PQQ", "type": "capsule", "timing": ["با صبحانه"]},
+        {"name": "EGCG", "name_en": "EGCG", "type": "capsule", "timing": ["صبح"]}
+      ]
+    }
+  ]
+}
