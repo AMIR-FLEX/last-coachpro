@@ -1,0 +1,580 @@
+{
+  "resistance_exercises": {
+    "muscle_groups": [
+      {
+        "name": "سینه",
+        "name_en": "Chest",
+        "icon": "💪",
+        "subgroups": [
+          {
+            "name": "میانی",
+            "name_en": "Mid",
+            "exercises": [
+              {"name": "پرس سینه هالتر", "name_en": "Bench Press", "equipment": "هالتر", "type": "compound"},
+              {"name": "پرس سینه دمبل", "name_en": "DB Press", "equipment": "دمبل", "type": "compound"},
+              {"name": "شنا سوئدی", "name_en": "Push-up", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "شنا سوئدی دست جمع", "name_en": "Close-Grip Push-up", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "شنا سوئدی دست باز", "name_en": "Wide-Grip Push-up", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "شنا سوئدی الماسی", "name_en": "Diamond Push-up", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "دستگاه پرس سینه", "name_en": "Machine Press", "equipment": "دستگاه", "type": "compound"},
+              {"name": "پک دک", "name_en": "Pec Deck", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "فلای سینه دمبل", "name_en": "DB Fly", "equipment": "دمبل", "type": "isolation"},
+              {"name": "فلای سینه کابل", "name_en": "Cable Fly", "equipment": "کابل", "type": "isolation"},
+              {"name": "پرس سینه اسمیت", "name_en": "Smith Press", "equipment": "اسمیت", "type": "compound"},
+              {"name": "پرس سینه با کش", "name_en": "Resistance Band Press", "equipment": "کش", "type": "compound"},
+              {"name": "پرس سینه با دمبل روی زمین", "name_en": "Floor Press", "equipment": "دمبل", "type": "compound"}
+            ]
+          },
+          {
+            "name": "بالا",
+            "name_en": "Upper",
+            "exercises": [
+              {"name": "پرس بالا سینه هالتر", "name_en": "Incline Press", "equipment": "هالتر", "type": "compound"},
+              {"name": "پرس بالا سینه دمبل", "name_en": "Incline DB Press", "equipment": "دمبل", "type": "compound"},
+              {"name": "قفسه بالا سینه دمبل", "name_en": "Incline Fly", "equipment": "دمبل", "type": "isolation"},
+              {"name": "قفسه بالا سینه کابل", "name_en": "Incline Cable Fly", "equipment": "کابل", "type": "isolation"},
+              {"name": "کراس اور از پایین", "name_en": "Low Cable Crossover", "equipment": "کابل", "type": "isolation"},
+              {"name": "پرس بالا سینه دستگاه", "name_en": "Incline Machine", "equipment": "دستگاه", "type": "compound"},
+              {"name": "پرس بالاسینه اسمیت", "name_en": "Incline Smith", "equipment": "اسمیت", "type": "compound"},
+              {"name": "پرس بالا سینه با کش", "name_en": "Incline Band Press", "equipment": "کش", "type": "compound"}
+            ]
+          },
+          {
+            "name": "زیر",
+            "name_en": "Lower",
+            "exercises": [
+              {"name": "پرس زیر سینه هالتر", "name_en": "Decline Press", "equipment": "هالتر", "type": "compound"},
+              {"name": "پرس زیر سینه دمبل", "name_en": "Decline DB Press", "equipment": "دمبل", "type": "compound"},
+              {"name": "پارالل", "name_en": "Dips", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "پارالل با کمک", "name_en": "Assisted Dips", "equipment": "دستگاه", "type": "compound"},
+              {"name": "پارالل با وزن", "name_en": "Weighted Dips", "equipment": "وزنه", "type": "compound"},
+              {"name": "کراس اور از بالا", "name_en": "High Cable Crossover", "equipment": "کابل", "type": "isolation"},
+              {"name": "پرس زیرسینه اسمیت", "name_en": "Decline Smith", "equipment": "اسمیت", "type": "compound"},
+              {"name": "پرس زیر سینه با کش", "name_en": "Decline Band Press", "equipment": "کش", "type": "compound"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "پشت و زیربغل",
+        "name_en": "Back",
+        "icon": "🔙",
+        "subgroups": [
+          {
+            "name": "ضخامت",
+            "name_en": "Thickness",
+            "exercises": [
+              {"name": "زیربغل هالتر خم", "name_en": "Barbell Row", "equipment": "هالتر", "type": "compound"},
+              {"name": "زیربغل دمبل تک خم", "name_en": "DB Row", "equipment": "دمبل", "type": "compound"},
+              {"name": "زیربغل قایقی", "name_en": "Seated Cable Row", "equipment": "کابل", "type": "compound"},
+              {"name": "تی‌بار", "name_en": "T-Bar Row", "equipment": "هالتر", "type": "compound"},
+              {"name": "فیس پول", "name_en": "Face Pull", "equipment": "کابل", "type": "isolation"},
+              {"name": "زیربغل پارویی تک دست", "name_en": "Single-arm Row", "equipment": "دمبل", "type": "compound"},
+              {"name": "زیربغل پارویی با کش", "name_en": "Band Row", "equipment": "کش", "type": "compound"}
+            ]
+          },
+          {
+            "name": "پهنا",
+            "name_en": "Width",
+            "exercises": [
+              {"name": "بارفیکس", "name_en": "Pull-up", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "بارفیکس دست جمع", "name_en": "Close-Grip Pull-up", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "بارفیکس دست باز", "name_en": "Wide-Grip Pull-up", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "بارفیکس با کمک", "name_en": "Assisted Pull-up", "equipment": "دستگاه", "type": "compound"},
+              {"name": "بارفیکس با وزن", "name_en": "Weighted Pull-up", "equipment": "وزنه", "type": "compound"},
+              {"name": "زیربغل سیم‌کش از جلو", "name_en": "Lat Pulldown", "equipment": "کابل", "type": "compound"},
+              {"name": "پول‌اور دمبل", "name_en": "DB Pullover", "equipment": "دمبل", "type": "isolation"},
+              {"name": "پول‌اور کابل", "name_en": "Cable Pullover", "equipment": "کابل", "type": "isolation"},
+              {"name": "زیربغل سیم‌کش دست صاف", "name_en": "Straight-Arm Pulldown", "equipment": "کابل", "type": "isolation"}
+            ]
+          },
+          {
+            "name": "کول و تراپز",
+            "name_en": "Traps",
+            "exercises": [
+              {"name": "شراگ هالتر", "name_en": "Barbell Shrug", "equipment": "هالتر", "type": "isolation"},
+              {"name": "شراگ دمبل", "name_en": "DB Shrug", "equipment": "دمبل", "type": "isolation"},
+              {"name": "شراگ کابل", "name_en": "Cable Shrug", "equipment": "کابل", "type": "isolation"},
+              {"name": "کول هالتر دست باز", "name_en": "Upright Row", "equipment": "هالتر", "type": "compound"},
+              {"name": "کول دمبل", "name_en": "DB Upright Row", "equipment": "دمبل", "type": "compound"},
+              {"name": "کول کابل", "name_en": "Cable Upright Row", "equipment": "کابل", "type": "compound"},
+              {"name": "شراگ با کش", "name_en": "Band Shrug", "equipment": "کش", "type": "isolation"}
+            ]
+          },
+          {
+            "name": "فیله کمر",
+            "name_en": "Lower Back",
+            "exercises": [
+              {"name": "ددلیفت کلاسیک", "name_en": "Deadlift", "equipment": "هالتر", "type": "compound"},
+              {"name": "ددلیفت رومانیایی", "name_en": "RDL", "equipment": "هالتر", "type": "compound"},
+              {"name": "ددلیفت سومو", "name_en": "Sumo Deadlift", "equipment": "هالتر", "type": "compound"},
+              {"name": "فیله کمر دستگاه", "name_en": "Back Extension", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "سلام ژاپنی", "name_en": "Good Morning", "equipment": "هالتر", "type": "compound"},
+              {"name": "سلام ژاپنی با دمبل", "name_en": "DB Good Morning", "equipment": "دمبل", "type": "compound"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "پا",
+        "name_en": "Legs",
+        "icon": "🦵",
+        "subgroups": [
+          {
+            "name": "چهارسر",
+            "name_en": "Quads",
+            "exercises": [
+              {"name": "اسکات هالتر از پشت", "name_en": "Squat", "equipment": "هالتر", "type": "compound"},
+              {"name": "اسکات هالتر از جلو", "name_en": "Front Squat", "equipment": "هالتر", "type": "compound"},
+              {"name": "اسکات سومو", "name_en": "Sumo Squat", "equipment": "دمبل", "type": "compound"},
+              {"name": "اسکات بلغاری", "name_en": "Bulgarian Split Squat", "equipment": "دمبل", "type": "compound"},
+              {"name": "اسکات اسمیت", "name_en": "Smith Squat", "equipment": "اسمیت", "type": "compound"},
+              {"name": "اسکات با وزن بدن", "name_en": "Bodyweight Squat", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "پرس پا ماشین", "name_en": "Leg Press", "equipment": "دستگاه", "type": "compound"},
+              {"name": "جلو ران دستگاه", "name_en": "Leg Extension", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "لانگ دمبل", "name_en": "DB Lunges", "equipment": "دمبل", "type": "compound"},
+              {"name": "لانگ با هالتر", "name_en": "Barbell Lunges", "equipment": "هالتر", "type": "compound"},
+              {"name": "هاک پا ماشین", "name_en": "Hack Squat", "equipment": "دستگاه", "type": "compound"},
+              {"name": "اسکات با کش", "name_en": "Band Squat", "equipment": "کش", "type": "compound"}
+            ]
+          },
+          {
+            "name": "همسترینگ",
+            "name_en": "Hamstrings",
+            "exercises": [
+              {"name": "پشت ران دستگاه خوابیده", "name_en": "Lying Leg Curl", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "پشت ران نشسته", "name_en": "Seated Leg Curl", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "ددلیفت پا صاف", "name_en": "Stiff-Leg Deadlift", "equipment": "هالتر", "type": "compound"},
+              {"name": "ددلیفت پا صاف با دمبل", "name_en": "DB Stiff-Leg Deadlift", "equipment": "دمبل", "type": "compound"},
+              {"name": "کیک‌بک سیم‌کش", "name_en": "Cable Kickback", "equipment": "کابل", "type": "isolation"},
+              {"name": "پشت ران ایستاده", "name_en": "Standing Leg Curl", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "پشت ران با کش", "name_en": "Band Leg Curl", "equipment": "کش", "type": "isolation"}
+            ]
+          },
+          {
+            "name": "باسن",
+            "name_en": "Glutes",
+            "exercises": [
+              {"name": "هیپ تراست هالتر", "name_en": "Hip Thrust", "equipment": "هالتر", "type": "compound"},
+              {"name": "هیپ تراست با دمبل", "name_en": "DB Hip Thrust", "equipment": "دمبل", "type": "compound"},
+              {"name": "هیپ تراست با کابل", "name_en": "Cable Hip Thrust", "equipment": "کابل", "type": "compound"},
+              {"name": "پل باسن", "name_en": "Glute Bridge", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "پل باسن با هالتر", "name_en": "Barbell Glute Bridge", "equipment": "هالتر", "type": "compound"},
+              {"name": "هیپ ابداکشن دستگاه", "name_en": "Hip Abduction Machine", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "هیپ ابداکشن با کش", "name_en": "Band Hip Abduction", "equipment": "کش", "type": "isolation"}
+            ]
+          },
+          {
+            "name": "ساق",
+            "name_en": "Calves",
+            "exercises": [
+              {"name": "ساق پا ایستاده", "name_en": "Standing Calf Raise", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "ساق پا ایستاده با دمبل", "name_en": "DB Standing Calf Raise", "equipment": "دمبل", "type": "isolation"},
+              {"name": "ساق پا نشسته", "name_en": "Seated Calf Raise", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "ساق پا پرس پا", "name_en": "Leg Press Calf Raise", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "ساق اسمیت", "name_en": "Smith Calf Raise", "equipment": "اسمیت", "type": "isolation"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "سرشانه",
+        "name_en": "Shoulders",
+        "icon": "🔺",
+        "subgroups": [
+          {
+            "name": "جلویی",
+            "name_en": "Anterior",
+            "exercises": [
+              {"name": "پرس سرشانه هالتر نظامی", "name_en": "Military Press", "equipment": "هالتر", "type": "compound"},
+              {"name": "پرس سرشانه دمبل", "name_en": "DB Shoulder Press", "equipment": "دمبل", "type": "compound"},
+              {"name": "پرس سرشانه دستگاه", "name_en": "Machine Press", "equipment": "دستگاه", "type": "compound"},
+              {"name": "نشر از جلو دمبل", "name_en": "Front Raise", "equipment": "دمبل", "type": "isolation"},
+              {"name": "نشر از جلو کابل", "name_en": "Cable Front Raise", "equipment": "کابل", "type": "isolation"},
+              {"name": "نشر از جلو با کش", "name_en": "Band Front Raise", "equipment": "کش", "type": "isolation"},
+              {"name": "پرس آرنولد", "name_en": "Arnold Press", "equipment": "دمبل", "type": "compound"}
+            ]
+          },
+          {
+            "name": "میانی",
+            "name_en": "Lateral",
+            "exercises": [
+              {"name": "نشر جانب دمبل", "name_en": "Lateral Raise", "equipment": "دمبل", "type": "isolation"},
+              {"name": "نشر جانب دمبل نشسته", "name_en": "Seated Lateral Raise", "equipment": "دمبل", "type": "isolation"},
+              {"name": "نشر جانب سیم‌کش", "name_en": "Cable Lateral Raise", "equipment": "کابل", "type": "isolation"},
+              {"name": "نشر جانب با کش", "name_en": "Band Lateral Raise", "equipment": "کش", "type": "isolation"},
+              {"name": "کول هالتر", "name_en": "Upright Row", "equipment": "هالتر", "type": "compound"},
+              {"name": "کول دمبل", "name_en": "DB Upright Row", "equipment": "دمبل", "type": "compound"}
+            ]
+          },
+          {
+            "name": "خلفی",
+            "name_en": "Posterior",
+            "exercises": [
+              {"name": "نشر خم دمبل", "name_en": "Bent-Over DB Raise", "equipment": "دمبل", "type": "isolation"},
+              {"name": "نشر خم دمبل نشسته", "name_en": "Seated Bent-Over Raise", "equipment": "دمبل", "type": "isolation"},
+              {"name": "فلای معکوس دستگاه", "name_en": "Reverse Pec Deck", "equipment": "دستگاه", "type": "isolation"},
+              {"name": "فلای معکوس با کابل", "name_en": "Cable Reverse Fly", "equipment": "کابل", "type": "isolation"},
+              {"name": "فلای معکوس با کش", "name_en": "Band Reverse Fly", "equipment": "کش", "type": "isolation"},
+              {"name": "فیس پول", "name_en": "Face Pull", "equipment": "کابل", "type": "isolation"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "بازو",
+        "name_en": "Arms",
+        "icon": "💪",
+        "subgroups": [
+          {
+            "name": "جلو بازو",
+            "name_en": "Biceps",
+            "exercises": [
+              {"name": "جلو بازو هالتر ایستاده", "name_en": "Barbell Curl", "equipment": "هالتر", "type": "isolation"},
+              {"name": "جلو بازو دمبل متناوب", "name_en": "Alternating DB Curl", "equipment": "دمبل", "type": "isolation"},
+              {"name": "جلو بازو چکشی", "name_en": "Hammer Curl", "equipment": "دمبل", "type": "isolation"},
+              {"name": "جلو بازو لاری", "name_en": "Preacher Curl", "equipment": "هالتر", "type": "isolation"},
+              {"name": "جلو بازو سیم‌کش", "name_en": "Cable Curl", "equipment": "کابل", "type": "isolation"},
+              {"name": "کنسنتریشن", "name_en": "Concentration Curl", "equipment": "دمبل", "type": "isolation"},
+              {"name": "جلو بازو با کش", "name_en": "Band Curl", "equipment": "کش", "type": "isolation"},
+              {"name": "جلو بازو هالتر EZ", "name_en": "EZ Bar Curl", "equipment": "هالتر EZ", "type": "isolation"}
+            ]
+          },
+          {
+            "name": "پشت بازو",
+            "name_en": "Triceps",
+            "exercises": [
+              {"name": "پشت بازو سیم‌کش", "name_en": "Triceps Pushdown", "equipment": "کابل", "type": "isolation"},
+              {"name": "پشت بازو سیم‌کش با طناب", "name_en": "Rope Pushdown", "equipment": "کابل", "type": "isolation"},
+              {"name": "پشت بازو هالتر خوابیده", "name_en": "Skullcrusher", "equipment": "هالتر", "type": "isolation"},
+              {"name": "پشت بازو دمبل خوابیده", "name_en": "DB Skullcrusher", "equipment": "دمبل", "type": "isolation"},
+              {"name": "دیپ نیمکت", "name_en": "Bench Dip", "equipment": "وزن بدن", "type": "compound"},
+              {"name": "پشت بازو دمبل پشت سر", "name_en": "Overhead DB Extension", "equipment": "دمبل", "type": "isolation"},
+              {"name": "پشت بازو کابل پشت سر", "name_en": "Overhead Cable Extension", "equipment": "کابل", "type": "isolation"},
+              {"name": "کیک بک دمبل", "name_en": "DB Kickback", "equipment": "دمبل", "type": "isolation"},
+              {"name": "پشت بازو با کش", "name_en": "Band Triceps Extension", "equipment": "کش", "type": "isolation"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "شکم و پهلو",
+        "name_en": "Core",
+        "icon": "🔥",
+        "subgroups": [
+          {
+            "name": "شکم",
+            "name_en": "Abs",
+            "exercises": [
+              {"name": "کرانچ", "name_en": "Crunch", "equipment": "وزن بدن", "type": "isolation"},
+              {"name": "کرانچ با وزن", "name_en": "Weighted Crunch", "equipment": "وزنه", "type": "isolation"},
+              {"name": "کرانچ معکوس", "name_en": "Reverse Crunch", "equipment": "وزن بدن", "type": "isolation"},
+              {"name": "زیرشکم خلبانی", "name_en": "Hanging Leg Raise", "equipment": "وزن بدن", "type": "isolation"},
+              {"name": "رول اوت با چرخ", "name_en": "Ab Rollout", "equipment": "چرخ شکم", "type": "isolation"},
+              {"name": "پلانک", "name_en": "Plank", "equipment": "وزن بدن", "type": "isolation"},
+              {"name": "کرانچ کابل", "name_en": "Cable Crunch", "equipment": "کابل", "type": "isolation"},
+              {"name": "کرانچ با توپ", "name_en": "Ball Crunch", "equipment": "توپ", "type": "isolation"}
+            ]
+          },
+          {
+            "name": "پهلو",
+            "name_en": "Obliques",
+            "exercises": [
+              {"name": "راشن توییست", "name_en": "Russian Twist", "equipment": "وزن بدن", "type": "isolation"},
+              {"name": "کرانچ دوچرخه", "name_en": "Bicycle Crunch", "equipment": "وزن بدن", "type": "isolation"},
+              {"name": "پلانک جانبی", "name_en": "Side Plank", "equipment": "وزن بدن", "type": "isolation"},
+              {"name": "وودچاپ", "name_en": "Cable Woodchop", "equipment": "کابل", "type": "compound"},
+              {"name": "کرانچ پهلو", "name_en": "Side Crunch", "equipment": "وزن بدن", "type": "isolation"}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "cardio_exercises": {
+    "categories": [
+      {
+        "name": "دستگاه‌های هوازی",
+        "name_en": "Cardio Machines",
+        "exercises": [
+          {"name": "تردمیل", "name_en": "Treadmill", "intensity_levels": ["کم", "متوسط", "بالا"]},
+          {"name": "تردمیل با شیب", "name_en": "Incline Treadmill", "intensity_levels": ["کم", "متوسط", "بالا"]},
+          {"name": "دوچرخه ثابت", "name_en": "Stationary Bike", "intensity_levels": ["کم", "متوسط", "بالا"]},
+          {"name": "دوچرخه اسپینینگ", "name_en": "Spinning Bike", "intensity_levels": ["متوسط", "بالا"]},
+          {"name": "الپتیکال", "name_en": "Elliptical", "intensity_levels": ["کم", "متوسط", "بالا"]},
+          {"name": "روئینگ", "name_en": "Rowing Machine", "intensity_levels": ["کم", "متوسط", "بالا"]},
+          {"name": "استپر", "name_en": "Stepper", "intensity_levels": ["کم", "متوسط", "بالا"]},
+          {"name": "اسکی فضایی", "name_en": "SkiErg", "intensity_levels": ["کم", "متوسط", "بالا"]}
+        ]
+      },
+      {
+        "name": "تمرینات اینتروال",
+        "name_en": "Interval Training",
+        "exercises": [
+          {"name": "HIIT (تمرین اینتروال با شدت بالا)", "name_en": "HIIT", "intensity_levels": ["بالا"]},
+          {"name": "HIIT روی تردمیل", "name_en": "Treadmill HIIT", "intensity_levels": ["بالا"]},
+          {"name": "HIIT روی دوچرخه", "name_en": "Bike HIIT", "intensity_levels": ["بالا"]},
+          {"name": "HIIT با وزن بدن", "name_en": "Bodyweight HIIT", "intensity_levels": ["بالا"]},
+          {"name": "Tabata", "name_en": "Tabata", "intensity_levels": ["بالا"]},
+          {"name": "AMRAP", "name_en": "AMRAP", "intensity_levels": ["متوسط", "بالا"]},
+          {"name": "EMOM", "name_en": "EMOM", "intensity_levels": ["متوسط", "بالا"]}
+        ]
+      },
+      {
+        "name": "دویدن و پیاده‌روی",
+        "name_en": "Running & Walking",
+        "exercises": [
+          {"name": "دویدن آهسته", "name_en": "Jogging", "intensity_levels": ["کم"]},
+          {"name": "دویدن متوسط", "name_en": "Running", "intensity_levels": ["متوسط"]},
+          {"name": "دویدن سریع", "name_en": "Sprinting", "intensity_levels": ["بالا"]},
+          {"name": "دویدن استقامتی", "name_en": "Endurance Running", "intensity_levels": ["متوسط"]},
+          {"name": "پیاده‌روی", "name_en": "Walking", "intensity_levels": ["کم"]},
+          {"name": "پیاده‌روی سریع", "name_en": "Brisk Walking", "intensity_levels": ["کم", "متوسط"]},
+          {"name": "پیاده‌روی با شیب", "name_en": "Incline Walking", "intensity_levels": ["متوسط"]}
+        ]
+      },
+      {
+        "name": "دوچرخه‌سواری",
+        "name_en": "Cycling",
+        "exercises": [
+          {"name": "دوچرخه‌سواری در جاده", "name_en": "Road Cycling", "intensity_levels": ["کم", "متوسط", "بالا"]},
+          {"name": "دوچرخه‌سواری در کوهستان", "name_en": "Mountain Cycling", "intensity_levels": ["متوسط", "بالا"]},
+          {"name": "دوچرخه‌سواری استقامتی", "name_en": "Endurance Cycling", "intensity_levels": ["متوسط"]}
+        ]
+      },
+      {
+        "name": "شنا",
+        "name_en": "Swimming",
+        "exercises": [
+          {"name": "شنا کرال سینه", "name_en": "Freestyle", "intensity_levels": ["کم", "متوسط", "بالا"]},
+          {"name": "شنا کرال پشت", "name_en": "Backstroke", "intensity_levels": ["کم", "متوسط"]},
+          {"name": "شنا پروانه", "name_en": "Butterfly", "intensity_levels": ["بالا"]},
+          {"name": "شنا قورباغه", "name_en": "Breaststroke", "intensity_levels": ["کم", "متوسط"]},
+          {"name": "شنا ترکیبی", "name_en": "Medley", "intensity_levels": ["متوسط", "بالا"]}
+        ]
+      },
+      {
+        "name": "تمرینات عملکردی",
+        "name_en": "Functional Training",
+        "exercises": [
+          {"name": "برپی", "name_en": "Burpee", "intensity_levels": ["بالا"]},
+          {"name": "جکینگ", "name_en": "Jumping Jacks", "intensity_levels": ["کم", "متوسط"]},
+          {"name": "کوهنوردی", "name_en": "Mountain Climbers", "intensity_levels": ["متوسط", "بالا"]},
+          {"name": "پرش روی جعبه", "name_en": "Box Jumps", "intensity_levels": ["متوسط", "بالا"]},
+          {"name": "طناب زنی", "name_en": "Jump Rope", "intensity_levels": ["کم", "متوسط", "بالا"]}
+        ]
+      }
+    ]
+  },
+  "corrective_exercises": {
+    "conditions": [
+      {
+        "name": "کایفوز و سر به جلو",
+        "name_en": "Kyphosis/Forward Head",
+        "exercises": [
+          {"name": "کشش سینه در چارچوب در", "name_en": "Doorway Stretch"},
+          {"name": "کشش سینه با کش", "name_en": "Band Chest Stretch"},
+          {"name": "حرکت YTWL روی زمین", "name_en": "YTWL on Floor"},
+          {"name": "حرکت YTWL با کش", "name_en": "Band YTWL"},
+          {"name": "وال انجل", "name_en": "Wall Angel"},
+          {"name": "فوم رول سینه ای", "name_en": "Thoracic Foam Rolling"},
+          {"name": "چانه به داخل", "name_en": "Chin Tuck"},
+          {"name": "تقویت میان‌کتفی", "name_en": "Scapular Retraction"},
+          {"name": "کشش گردن جانبی", "name_en": "Lateral Neck Stretch"},
+          {"name": "تقویت عضلات عمقی گردن", "name_en": "Deep Neck Flexor Exercise"}
+        ]
+      },
+      {
+        "name": "لوردوز و گودی کمر",
+        "name_en": "Lordosis",
+        "exercises": [
+          {"name": "کشش خم کننده های ران", "name_en": "Hip Flexor Stretch"},
+          {"name": "ددباگ", "name_en": "Dead Bug"},
+          {"name": "حرکت گربه-گاو", "name_en": "Cat-Cow"},
+          {"name": "پلانک با تیلت لگن", "name_en": "Plank with Pelvic Tilt"},
+          {"name": "تقویت عضلات شکم", "name_en": "Core Strengthening"},
+          {"name": "کشش QL", "name_en": "QL Stretch"},
+          {"name": "نیلینگ هیپ فلکسور", "name_en": "Kneeling Hip Flexor"},
+          {"name": "کشش همسترینگ", "name_en": "Hamstring Stretch"},
+          {"name": "تقویت عضلات باسن", "name_en": "Glute Strengthening"}
+        ]
+      },
+      {
+        "name": "اسکولیوز",
+        "name_en": "Scoliosis",
+        "exercises": [
+          {"name": "کشش یکطرفه", "name_en": "Unilateral Stretching"},
+          {"name": "تمرینات تعادلی", "name_en": "Balance Exercises"},
+          {"name": "پلانک جانبی", "name_en": "Side Plank"},
+          {"name": "تنفس لترال اصلاحی", "name_en": "Corrective Lateral Breathing"},
+          {"name": "تقویت عضلات دورکننده/نزدیک‌کننده لگن", "name_en": "Hip Abductor/Adductor Strengthening"},
+          {"name": "کشش قفسه سینه یکطرفه", "name_en": "Unilateral Chest Stretch"},
+          {"name": "تقویت عضلات کمر یکطرفه", "name_en": "Unilateral Back Strengthening"}
+        ]
+      },
+      {
+        "name": "زانوی پرانتزی/ضربدری",
+        "name_en": "Knee Valgus/Varus",
+        "exercises": [
+          {"name": "کلامشل", "name_en": "Clamshell"},
+          {"name": "تقویت دورکننده ران", "name_en": "Hip Abduction"},
+          {"name": "استپ داون", "name_en": "Step Down"},
+          {"name": "کشش نزدیک‌کننده", "name_en": "Adductor Stretch"},
+          {"name": "X-band Walks", "name_en": "X-band Walks"},
+          {"name": "تقویت گلوت مید", "name_en": "Glute Med Strengthening"},
+          {"name": "کشش IT Band", "name_en": "IT Band Stretch"},
+          {"name": "تقویت عضلات داخلی ران", "name_en": "Inner Thigh Strengthening"}
+        ]
+      },
+      {
+        "name": "پای صاف",
+        "name_en": "Flat Feet",
+        "exercises": [
+          {"name": "کشش و تقویت کف پا", "name_en": "Foot Strengthening"},
+          {"name": "تمرینات تعادل قوس", "name_en": "Arch Balance Exercises"},
+          {"name": "Calf Raise با تمرکز قوس", "name_en": "Arch-Focused Calf Raise"},
+          {"name": "Short Foot Exercise", "name_en": "Short Foot Exercise"},
+          {"name": "کشش پلانتار فاشیا", "name_en": "Plantar Fascia Stretch"},
+          {"name": "تقویت عضلات داخلی پا", "name_en": "Intrinsic Foot Strengthening"},
+          {"name": "کشش ساق پا", "name_en": "Calf Stretch"}
+        ]
+      },
+      {
+        "name": "شانه گرد",
+        "name_en": "Rounded Shoulders",
+        "exercises": [
+          {"name": "کشش قفسه سینه", "name_en": "Chest Stretch"},
+          {"name": "تقویت عضلات پشت شانه", "name_en": "Rear Delt Strengthening"},
+          {"name": "کشش گردن", "name_en": "Neck Stretch"},
+          {"name": "تقویت عضلات عمقی گردن", "name_en": "Deep Neck Strengthening"}
+        ]
+      },
+      {
+        "name": "شانه یخ‌زده",
+        "name_en": "Frozen Shoulder",
+        "exercises": [
+          {"name": "کشش شانه", "name_en": "Shoulder Stretch"},
+          {"name": "تقویت عضلات شانه", "name_en": "Shoulder Strengthening"},
+          {"name": "کشش کپسول شانه", "name_en": "Capsule Stretch"},
+          {"name": "تقویت عضلات روتاتور کاف", "name_en": "Rotator Cuff Strengthening"}
+        ]
+      },
+      {
+        "name": "درد پایین کمر",
+        "name_en": "Lower Back Pain",
+        "exercises": [
+          {"name": "کشش کمر", "name_en": "Lower Back Stretch"},
+          {"name": "تقویت عضلات کمر", "name_en": "Lower Back Strengthening"},
+          {"name": "کشش همسترینگ", "name_en": "Hamstring Stretch"},
+          {"name": "تقویت عضلات شکم", "name_en": "Core Strengthening"},
+          {"name": "کشش باسن", "name_en": "Glute Stretch"},
+          {"name": "تقویت عضلات باسن", "name_en": "Glute Strengthening"}
+        ]
+      }
+    ]
+  },
+  "warmup_exercises": [
+    {"name": "راه رفتن سریع (5 دقیقه)", "name_en": "Brisk Walking", "duration": 5, "type": "aerobic"},
+    {"name": "دویدن آهسته در جا", "name_en": "Jogging in Place", "duration": 3, "type": "aerobic"},
+    {"name": "دوچرخه ثابت سبک (5 دقیقه)", "name_en": "Light Stationary Bike", "duration": 5, "type": "aerobic"},
+    {"name": "الپتیکال سبک (5 دقیقه)", "name_en": "Light Elliptical", "duration": 5, "type": "aerobic"},
+    {"name": "طناب زنی سبک", "name_en": "Light Jump Rope", "duration": 3, "type": "aerobic"},
+    {"name": "چرخش بازوها", "name_en": "Arm Circles", "duration": 1, "type": "dynamic_stretch"},
+    {"name": "چرخش شانه‌ها", "name_en": "Shoulder Circles", "duration": 1, "type": "dynamic_stretch"},
+    {"name": "کشش پویای سینه", "name_en": "Dynamic Chest Stretch", "duration": 1, "type": "dynamic_stretch"},
+    {"name": "کشش پویای پشت (Cat-Cow)", "name_en": "Cat-Cow", "duration": 2, "type": "dynamic_stretch"},
+    {"name": "چرخش گردن آهسته", "name_en": "Slow Neck Rotation", "duration": 1, "type": "dynamic_stretch"},
+    {"name": "چرخش مچ دست", "name_en": "Wrist Rotation", "duration": 1, "type": "dynamic_stretch"},
+    {"name": "لانگ پویا", "name_en": "Walking Lunges", "duration": 2, "type": "dynamic_stretch"},
+    {"name": "اسکات بدون وزنه", "name_en": "Bodyweight Squat", "duration": 2, "type": "dynamic_stretch"},
+    {"name": "کشش پویای همسترینگ", "name_en": "Leg Swings", "duration": 2, "type": "dynamic_stretch"},
+    {"name": "High Knees (زانو بالا)", "name_en": "High Knees", "duration": 1, "type": "dynamic_stretch"},
+    {"name": "Butt Kicks (پاشنه به باسن)", "name_en": "Butt Kicks", "duration": 1, "type": "dynamic_stretch"},
+    {"name": "چرخش لگن", "name_en": "Hip Circles", "duration": 1, "type": "dynamic_stretch"},
+    {"name": "Jumping Jacks", "name_en": "Jumping Jacks", "duration": 2, "type": "combined"},
+    {"name": "Inchworm (کرم اینچ)", "name_en": "Inchworm", "duration": 2, "type": "combined"},
+    {"name": "World's Greatest Stretch", "name_en": "World's Greatest Stretch", "duration": 3, "type": "combined"},
+    {"name": "پرش‌های کوتاه در جا", "name_en": "Small Jumps", "duration": 1, "type": "neural_activation"},
+    {"name": "تمرین تعادل یک پا", "name_en": "Single-Leg Balance", "duration": 1, "type": "neural_activation"},
+    {"name": "گرم کردن اختصاصی سینه (ست سبک)", "name_en": "Light Chest Set", "duration": 2, "type": "specific"},
+    {"name": "گرم کردن اختصاصی پشت (ست سبک)", "name_en": "Light Back Set", "duration": 2, "type": "specific"},
+    {"name": "گرم کردن اختصاصی پا (ست سبک)", "name_en": "Light Leg Set", "duration": 2, "type": "specific"},
+    {"name": "گرم کردن اختصاصی شانه (ست سبک)", "name_en": "Light Shoulder Set", "duration": 2, "type": "specific"},
+    {"name": "گرم کردن با کش مقاومتی", "name_en": "Resistance Band Warmup", "duration": 3, "type": "specific"}
+  ],
+  "cooldown_exercises": [
+    {"name": "راه رفتن آهسته (5 دقیقه)", "name_en": "Slow Walking", "duration": 5, "type": "light_aerobic"},
+    {"name": "دوچرخه ثابت سبک (5 دقیقه)", "name_en": "Light Stationary Bike", "duration": 5, "type": "light_aerobic"},
+    {"name": "کشش سینه با دیوار (30 ثانیه)", "name_en": "Wall Chest Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "کشش پشت بازو", "name_en": "Triceps Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "کشش جلو بازو", "name_en": "Biceps Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "کشش شانه کراس بادی", "name_en": "Cross-Body Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "کشش گردن جانبی", "name_en": "Lateral Neck Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "کشش زیربغل", "name_en": "Lat Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "Child's Pose (حالت کودک)", "name_en": "Child's Pose", "duration": 1, "type": "static_stretch"},
+    {"name": "کشش چهارسر ایستاده", "name_en": "Quad Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "کشش همسترینگ ایستاده", "name_en": "Standing Hamstring Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "کشش همسترینگ نشسته", "name_en": "Seated Hamstring Stretch", "duration": 1, "type": "static_stretch"},
+    {"name": "Pigeon Pose (کشش باسن)", "name_en": "Pigeon Pose", "duration": 1, "type": "static_stretch"},
+    {"name": "Figure Four Stretch", "name_en": "Figure Four Stretch", "duration": 1, "type": "static_stretch"},
+    {"name": "کشش ساق پا با دیوار", "name_en": "Wall Calf Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "کشش نزدیک‌کننده ران (Butterfly)", "name_en": "Butterfly Stretch", "duration": 1, "type": "static_stretch"},
+    {"name": "کشش IT Band", "name_en": "IT Band Stretch", "duration": 0.5, "type": "static_stretch"},
+    {"name": "کشش فلکسور ران", "name_en": "Hip Flexor Stretch", "duration": 1, "type": "static_stretch"},
+    {"name": "کشش کمر خوابیده", "name_en": "Knee to Chest", "duration": 1, "type": "back_stretch"},
+    {"name": "چرخش ستون فقرات خوابیده", "name_en": "Supine Twist", "duration": 1, "type": "back_stretch"},
+    {"name": "Cat-Cow آهسته", "name_en": "Slow Cat-Cow", "duration": 2, "type": "back_stretch"},
+    {"name": "Cobra Stretch", "name_en": "Cobra Stretch", "duration": 0.5, "type": "back_stretch"},
+    {"name": "تنفس دیافراگمی (2 دقیقه)", "name_en": "Diaphragmatic Breathing", "duration": 2, "type": "relaxation"},
+    {"name": "مدیتیشن کوتاه (3 دقیقه)", "name_en": "Short Meditation", "duration": 3, "type": "relaxation"},
+    {"name": "Savasana (استراحت کامل)", "name_en": "Savasana", "duration": 3, "type": "relaxation"},
+    {"name": "فوم رولر چهارسر", "name_en": "Quad Foam Rolling", "duration": 2, "type": "foam_rolling"},
+    {"name": "فوم رولر همسترینگ", "name_en": "Hamstring Foam Rolling", "duration": 2, "type": "foam_rolling"},
+    {"name": "فوم رولر IT Band", "name_en": "IT Band Foam Rolling", "duration": 2, "type": "foam_rolling"},
+    {"name": "فوم رولر پشت", "name_en": "Back Foam Rolling", "duration": 2, "type": "foam_rolling"},
+    {"name": "فوم رولر ساق پا", "name_en": "Calf Foam Rolling", "duration": 1, "type": "foam_rolling"},
+    {"name": "رهاسازی نقطه‌ای کف پا", "name_en": "Foot Ball Release", "duration": 1, "type": "point_release"},
+    {"name": "رهاسازی نقطه‌ای باسن", "name_en": "Glute Ball Release", "duration": 2, "type": "point_release"}
+  ],
+  "risky_exercises": {
+    "دیسک کمر": [
+      "ددلیفت کلاسیک",
+      "اسکات هالتر از پشت",
+      "زیربغل هالتر خم",
+      "سلام ژاپنی",
+      "ددلیفت رومانیایی",
+      "ددلیفت سومو",
+      "فیله کمر دستگاه"
+    ],
+    "دیسک گردن": [
+      "پرس سرشانه هالتر نظامی",
+      "شراگ هالتر",
+      "کول هالتر دست باز",
+      "پرس سرشانه هالتر از پشت",
+      "زیربغل سیم‌کش از پشت سر"
+    ],
+    "زانو درد": [
+      "جلو ران دستگاه",
+      "لانگ دمبل",
+      "اسکات عمیق",
+      "پرس پا با زاویه بسته",
+      "هاک پا با زاویه بسته"
+    ],
+    "شانه درد": [
+      "پرس سرشانه هالتر نظامی",
+      "پارالل",
+      "زیربغل سیم‌کش از پشت سر",
+      "پرس سرشانه هالتر از پشت"
+    ],
+    "آرنج درد": [
+      "جلو بازو لاری",
+      "پشت بازو هالتر خوابیده",
+      "دیپ نیمکت"
+    ],
+    "مچ درد": [
+      "پرس سینه هالتر",
+      "جلو بازو هالتر ایستاده",
+      "شراگ هالتر"
+    ]
+  }
+}

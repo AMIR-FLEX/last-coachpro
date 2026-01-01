@@ -1,5 +1,0 @@
-import { resistanceExercises } from '../data/resistanceExercises';
-import { foodData } from '../data/foodData';
-
-// مثال استفاده
-console.log(resistanceExercises["سینه (Chest)"]);
