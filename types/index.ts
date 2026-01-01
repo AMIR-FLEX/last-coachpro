@@ -256,14 +256,18 @@ export interface TrainingPlan {
 
 export interface TrainingDay {
   id: number;
-  plan_id: number;
+  training_plan_id: number; // Matches backend schema exactly
   day_number: number;
+  name?: string;
+  notes?: string;
+  is_rest_day?: boolean;
   workout_items?: WorkoutItem[];
+  created_at?: string;
 }
 
 export interface WorkoutItem {
   id: number;
-  day_id: number;
+  training_day_id: number; // Matches backend schema exactly (was: day_id)
   exercise_id?: number;
   exercise?: Exercise;
   custom_name?: string;
@@ -275,9 +279,11 @@ export interface WorkoutItem {
   weight?: number;
   duration_minutes?: number;
   rest_seconds?: number;
+  tempo?: string; // Matches backend
   intensity?: string;
   notes?: string;
   order: number;
+  created_at?: string;
 }
 
 export interface TrainingSession {
@@ -311,6 +317,7 @@ export interface DietPlan {
   target_protein?: number;
   target_carbs?: number;
   target_fat?: number;
+  general_notes?: string; // Matches backend schema (was missing)
   is_active: boolean;
   created_at: string;
   updated_at?: string;
@@ -319,13 +326,13 @@ export interface DietPlan {
 
 export interface DietItem {
   id: number;
-  plan_id: number;
+  diet_plan_id: number; // Matches backend schema exactly (was: plan_id)
   food_id?: number;
   food?: Food;
   custom_name?: string;
-  meal: string;
+  meal: string; // MealType enum value from backend
   amount: number;
-  unit: string;
+  unit?: string; // Optional in backend
   custom_calories?: number;
   custom_protein?: number;
   custom_carbs?: number;
@@ -334,7 +341,9 @@ export interface DietItem {
   calculated_protein?: number;
   calculated_carbs?: number;
   calculated_fat?: number;
+  notes?: string; // Matches backend
   order: number;
+  created_at?: string;
 }
 
 export interface Meal {
@@ -372,7 +381,7 @@ export interface SupplementPlan {
 
 export interface SupplementPlanItem {
   id: number;
-  plan_id: number;
+  supplement_plan_id: number; // Matches backend schema exactly (was: plan_id)
   supplement_id?: number;
   supplement?: Supplement;
   custom_name?: string;
@@ -381,6 +390,7 @@ export interface SupplementPlanItem {
   notes?: string;
   instructions?: string;
   order: number;
+  created_at?: string;
 }
 
 export interface Supplement {

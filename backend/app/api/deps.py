@@ -21,10 +21,21 @@ security = HTTPBearer(auto_error=False)
 def get_db() -> Generator[Session, None, None]:
     """
     Dependency برای دریافت session دیتابیس
+    
+    این تابع اطمینان می‌دهد که:
+    - Session همیشه بسته می‌شود حتی در صورت خطا
+    - Transaction ها به درستی commit یا rollback می‌شوند
+    
+    Note: این تابع duplicate است با backend/app/db/session.py
+    برای سازگاری با کد موجود نگه داشته شده است.
     """
     db = SessionLocal()
     try:
         yield db
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
     finally:
         db.close()
 

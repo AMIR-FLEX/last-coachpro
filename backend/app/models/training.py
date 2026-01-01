@@ -37,7 +37,7 @@ class TrainingPlan(Base, TimestampMixin):
     __tablename__ = "training_plans"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id"), index=True)
+    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id", ondelete="CASCADE"), index=True)
     
     # اطلاعات پایه
     name: Mapped[str] = mapped_column(String(200), default="برنامه تمرینی")
@@ -74,7 +74,7 @@ class TrainingDay(Base, TimestampMixin):
     __tablename__ = "training_days"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    training_plan_id: Mapped[int] = mapped_column(ForeignKey("training_plans.id"), index=True)
+    training_plan_id: Mapped[int] = mapped_column(ForeignKey("training_plans.id", ondelete="CASCADE"), index=True)
     
     # شماره روز (۱ تا ۷)
     day_number: Mapped[int] = mapped_column(Integer)
@@ -110,8 +110,8 @@ class WorkoutItem(Base, TimestampMixin):
     __tablename__ = "workout_items"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    training_day_id: Mapped[int] = mapped_column(ForeignKey("training_days.id"), index=True)
-    exercise_id: Mapped[Optional[int]] = mapped_column(ForeignKey("exercises.id"), nullable=True)
+    training_day_id: Mapped[int] = mapped_column(ForeignKey("training_days.id", ondelete="CASCADE"), index=True)
+    exercise_id: Mapped[Optional[int]] = mapped_column(ForeignKey("exercises.id", ondelete="SET NULL"), nullable=True)
     
     # ترتیب در لیست
     order: Mapped[int] = mapped_column(Integer, default=0)

@@ -81,7 +81,7 @@ class Exercise(Base, TimestampMixin):
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     muscle_group_id: Mapped[Optional[int]] = mapped_column(
-        ForeignKey("muscle_groups.id"), 
+        ForeignKey("muscle_groups.id", ondelete="SET NULL"), 
         nullable=True, 
         index=True
     )

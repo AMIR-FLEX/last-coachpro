@@ -24,7 +24,7 @@ class ProgressRecord(Base, TimestampMixin):
     __tablename__ = "progress_records"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id"), index=True)
+    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id", ondelete="CASCADE"), index=True)
     
     # تاریخ ثبت
     recorded_at: Mapped[date] = mapped_column(Date, default=date.today)

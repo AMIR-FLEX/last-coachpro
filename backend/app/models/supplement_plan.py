@@ -24,7 +24,7 @@ class SupplementPlan(Base, TimestampMixin):
     __tablename__ = "supplement_plans"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id"), index=True)
+    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id", ondelete="CASCADE"), index=True)
     
     # اطلاعات پایه
     name: Mapped[str] = mapped_column(String(200), default="نسخه مکمل")
@@ -58,8 +58,8 @@ class SupplementPlanItem(Base, TimestampMixin):
     __tablename__ = "supplement_plan_items"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    supplement_plan_id: Mapped[int] = mapped_column(ForeignKey("supplement_plans.id"), index=True)
-    supplement_id: Mapped[Optional[int]] = mapped_column(ForeignKey("supplements.id"), nullable=True)
+    supplement_plan_id: Mapped[int] = mapped_column(ForeignKey("supplement_plans.id", ondelete="CASCADE"), index=True)
+    supplement_id: Mapped[Optional[int]] = mapped_column(ForeignKey("supplements.id", ondelete="SET NULL"), nullable=True)
     
     # ترتیب در لیست
     order: Mapped[int] = mapped_column(Integer, default=0)

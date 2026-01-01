@@ -9,8 +9,9 @@ alembic==1.14.0
 aiosqlite==0.20.0
 
 # Validation & Serialization
-pydantic==2.10.4
-pydantic-settings==2.7.0
+# Using flexible versions for Python 3.11 compatibility
+pydantic>=2.5.0,<3.0.0
+pydantic-settings>=2.1.0,<3.0.0
 email-validator==2.2.0
 
 # Authentication & Security
@@ -25,12 +26,12 @@ weasyprint==63.1
 # Utilities
 python-dateutil==2.9.0
 httpx==0.28.1
-orjson==3.10.12
+# orjson removed - causes compilation issues on Windows with Python 3.11
+# FastAPI will use standard json library instead (still fast enough)
 
 # Development
 pytest==8.3.4
 pytest-asyncio==0.25.2
-httpx==0.28.1
 
 # Type checking
 mypy==1.14.1

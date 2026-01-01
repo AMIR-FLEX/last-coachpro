@@ -33,10 +33,10 @@ class Settings(BaseSettings):
     
     # تنظیمات CORS
     CORS_ORIGINS: list[str] = [
-        "http://localhost:3000",
-        "http://localhost:5173",
-        "http://127.0.0.1:3000",
-        "http://127.0.0.1:5173",
+        "http://localhost:3000",      # Next.js default port
+        "http://127.0.0.1:3000",      # Next.js with IP
+        "http://localhost:5173",      # Vite default port (for legacy)
+        "http://127.0.0.1:5173",      # Vite with IP (for legacy)
     ]
     
     # تنظیمات آپلود فایل

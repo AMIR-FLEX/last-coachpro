@@ -37,7 +37,7 @@ class DietPlan(Base, TimestampMixin):
     __tablename__ = "diet_plans"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id"), index=True)
+    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id", ondelete="CASCADE"), index=True)
     
     # اطلاعات پایه
     name: Mapped[str] = mapped_column(String(200), default="برنامه غذایی")
@@ -88,8 +88,8 @@ class DietItem(Base, TimestampMixin):
     __tablename__ = "diet_items"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    diet_plan_id: Mapped[int] = mapped_column(ForeignKey("diet_plans.id"), index=True)
-    food_id: Mapped[Optional[int]] = mapped_column(ForeignKey("foods.id"), nullable=True)
+    diet_plan_id: Mapped[int] = mapped_column(ForeignKey("diet_plans.id", ondelete="CASCADE"), index=True)
+    food_id: Mapped[Optional[int]] = mapped_column(ForeignKey("foods.id", ondelete="SET NULL"), nullable=True)
     
     # ترتیب در لیست
     order: Mapped[int] = mapped_column(Integer, default=0)

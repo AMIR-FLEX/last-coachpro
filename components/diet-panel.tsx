@@ -222,12 +222,29 @@ export function DietPanel({ athlete }: DietPanelProps) {
       }
     }
 
-    const ratio = parseFloat(amount) / info.b;
+    // Calculate macros based on unit type
+    // If unit is "عدد" (piece/number), treat amount as count
+    // Otherwise, treat as weight in the base unit (grams)
+    const isPieceUnit = info.u?.toLowerCase().includes('عدد') || 
+                       info.u?.toLowerCase().includes('number') || 
+                       info.u?.toLowerCase().includes('piece') ||
+                       info.u === 'عدد';
+    
+    let ratio: number;
+    if (isPieceUnit) {
+      // For piece units: amount is the count, so ratio = count
+      // Base amount (info.b) represents macros per 1 piece
+      ratio = parseFloat(amount);
+    } else {
+      // For weight units: ratio = actual_amount / base_amount
+      ratio = parseFloat(amount) / info.b;
+    }
+    
     const itemData = {
       meal,
       custom_name: foodName,
       amount: parseFloat(amount),
-      unit: info.u,
+      unit: info.u || 'گرم',
       custom_calories: Math.round(info.c * ratio),
       custom_protein: Math.round(info.p * ratio),
       custom_carbs: Math.round(info.ch * ratio),
@@ -426,8 +443,23 @@ export function DietPanel({ athlete }: DietPanelProps) {
           </div>
           <div className="flex gap-3 mb-6">
             <div className="flex-1 relative">
-              <input type="number" className="input-glass text-center font-bold" placeholder="مقدار" value={amount} onChange={e => setAmount(e.target.value)} />
-              <span className="absolute left-3 top-3 text-xs text-slate-400">{unit}</span>
+              <input 
+                type="number" 
+                className="input-glass text-center font-bold" 
+                placeholder="مقدار" 
+                value={amount} 
+                onChange={e => setAmount(e.target.value)}
+                min="0"
+                step={unit?.toLowerCase().includes('عدد') ? "1" : "0.1"}
+              />
+              <span className="absolute left-3 top-3 text-xs text-slate-400 font-semibold">
+                {unit === '-' ? 'واحد' : unit}
+              </span>
+              {unit !== '-' && (
+                <span className="absolute left-14 top-3 text-[10px] text-slate-500">
+                  {unit?.toLowerCase().includes('عدد') ? '(عدد)' : '(گرم)'}
+                </span>
+              )}
             </div>
             <button onClick={handleAddFood} className="btn-glass bg-emerald-600 hover:bg-emerald-500 text-white px-6">
               <Plus size={16} /> افزودن

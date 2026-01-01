@@ -22,9 +22,10 @@ def create_tables() -> None:
 
 
 def create_default_user(db: Session) -> None:
-    """ایجاد کاربر پیش‌فرض"""
+    """ایجاد کاربر پیش‌فرض (Idempotent)"""
     existing = db.query(User).filter(User.email == "admin@flexpro.com").first()
     if existing:
+        print("ℹ️  کاربر پیش‌فرض از قبل موجود است: admin@flexpro.com")
         return
     
     admin = User(
@@ -41,9 +42,13 @@ def create_default_user(db: Session) -> None:
 
 
 def create_food_categories(db: Session) -> None:
-    """ایجاد دسته‌بندی‌های غذا"""
-    existing = db.query(FoodCategory).first()
-    if existing:
+    """ایجاد دسته‌بندی‌های غذا (Idempotent)"""
+    # بررسی وجود دسته‌بندی‌های ضروری
+    protein_cat = db.query(FoodCategory).filter(FoodCategory.name == "منابع پروتئین").first()
+    carb_cat = db.query(FoodCategory).filter(FoodCategory.name == "منابع کربوهیدرات").first()
+    
+    if protein_cat and carb_cat:
+        print("ℹ️  دسته‌بندی‌های غذا از قبل موجود هستند")
         return
     
     categories = [
@@ -66,9 +71,11 @@ def create_food_categories(db: Session) -> None:
 
 
 def create_sample_foods(db: Session) -> None:
-    """ایجاد نمونه غذاها"""
+    """ایجاد نمونه غذاها (Idempotent)"""
+    # بررسی وجود حداقل یک غذا
     existing = db.query(Food).first()
     if existing:
+        print("ℹ️  نمونه غذاها از قبل موجود هستند")
         return
     
     # دریافت دسته‌بندی پروتئین
@@ -109,9 +116,13 @@ def create_sample_foods(db: Session) -> None:
 
 
 def create_muscle_groups(db: Session) -> None:
-    """ایجاد گروه‌های عضلانی"""
-    existing = db.query(MuscleGroup).first()
-    if existing:
+    """ایجاد گروه‌های عضلانی (Idempotent)"""
+    # بررسی وجود حداقل یک گروه عضلانی
+    chest = db.query(MuscleGroup).filter(MuscleGroup.name == "سینه").first()
+    back = db.query(MuscleGroup).filter(MuscleGroup.name == "پشت").first()
+    
+    if chest and back:
+        print("ℹ️  گروه‌های عضلانی از قبل موجود هستند")
         return
     
     groups = [
@@ -137,9 +148,11 @@ def create_muscle_groups(db: Session) -> None:
 
 
 def create_sample_exercises(db: Session) -> None:
-    """ایجاد نمونه تمرینات"""
+    """ایجاد نمونه تمرینات (Idempotent)"""
+    # بررسی وجود حداقل یک تمرین
     existing = db.query(Exercise).first()
     if existing:
+        print("ℹ️  نمونه تمرینات از قبل موجود هستند")
         return
     
     chest = db.query(MuscleGroup).filter(MuscleGroup.name == "سینه").first()
@@ -193,9 +206,11 @@ def create_sample_exercises(db: Session) -> None:
 
 
 def create_supplement_categories(db: Session) -> None:
-    """ایجاد دسته‌بندی‌های مکمل"""
+    """ایجاد دسته‌بندی‌های مکمل (Idempotent)"""
+    # بررسی وجود حداقل یک دسته‌بندی
     existing = db.query(SupplementCategory).first()
     if existing:
+        print("ℹ️  دسته‌بندی‌های مکمل از قبل موجود هستند")
         return
     
     categories = [
@@ -217,18 +232,31 @@ def create_supplement_categories(db: Session) -> None:
 
 
 def init_db(db: Session) -> None:
-    """راه‌اندازی کامل دیتابیس"""
+    """
+    راه‌اندازی کامل دیتابیس (Idempotent)
+    =====================================
+    این تابع می‌تواند چندین بار اجرا شود بدون ایجاد مشکل
+    در هر اجرا فقط داده‌های ضروری که وجود ندارند ایجاد می‌شوند
+    """
     print("🚀 شروع راه‌اندازی دیتابیس...")
     
-    create_tables()
-    create_default_user(db)
-    create_food_categories(db)
-    create_sample_foods(db)
-    create_muscle_groups(db)
-    create_sample_exercises(db)
-    create_supplement_categories(db)
-    
-    print("✅ راه‌اندازی دیتابیس با موفقیت انجام شد!")
+    try:
+        # ایجاد جداول (SQLAlchemy خودش بررسی می‌کند که وجود دارند یا نه)
+        create_tables()
+        
+        # ایجاد داده‌های اولیه (هر تابع idempotent است)
+        create_default_user(db)
+        create_food_categories(db)
+        create_sample_foods(db)
+        create_muscle_groups(db)
+        create_sample_exercises(db)
+        create_supplement_categories(db)
+        
+        print("✅ راه‌اندازی دیتابیس با موفقیت انجام شد!")
+    except Exception as e:
+        print(f"❌ خطا در راه‌اندازی دیتابیس: {e}")
+        db.rollback()
+        raise
 
 
 if __name__ == "__main__":

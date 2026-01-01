@@ -63,7 +63,7 @@ class Athlete(Base, TimestampMixin):
     
     # شناسه
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    coach_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    coach_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
     
     # اطلاعات پایه
     name: Mapped[str] = mapped_column(String(100))
@@ -155,7 +155,7 @@ class AthleteInjury(Base, TimestampMixin):
     __tablename__ = "athlete_injuries"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id"), index=True)
+    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id", ondelete="CASCADE"), index=True)
     
     body_part: Mapped[str] = mapped_column(String(100))  # کمر، زانو، شانه
     description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
@@ -179,7 +179,7 @@ class AthleteMeasurement(Base):
     __tablename__ = "athlete_measurements"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id"), index=True)
+    athlete_id: Mapped[int] = mapped_column(ForeignKey("athletes.id", ondelete="CASCADE"), index=True)
     
     # تاریخ اندازه‌گیری
     recorded_at: Mapped[date] = mapped_column(Date, default=date.today)

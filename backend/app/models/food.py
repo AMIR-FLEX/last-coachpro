@@ -48,7 +48,7 @@ class Food(Base, TimestampMixin):
     __tablename__ = "foods"
     
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    category_id: Mapped[int] = mapped_column(ForeignKey("food_categories.id"), index=True)
+    category_id: Mapped[int] = mapped_column(ForeignKey("food_categories.id", ondelete="CASCADE"), index=True)
     
     # اطلاعات پایه
     name: Mapped[str] = mapped_column(String(200))           # سینه مرغ (پخته)

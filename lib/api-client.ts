@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosError } from 'axios';
+import axios, { AxiosInstance, AxiosError, InternalAxiosRequestConfig } from 'axios';
 import type {
   User,
   UserCreate,
@@ -21,11 +21,16 @@ import type {
   MacrosResponse,
 } from '@/types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE_URL = 
+  typeof window !== 'undefined' 
+    ? (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000')
+    : 'http://localhost:8000';
 
 class ApiClient {
   private client: AxiosInstance;
   private token: string | null = null;
+  private isRefreshing = false;
+  private refreshSubscribers: Array<(token: string) => void> = [];
 
   constructor() {
     this.client = axios.create({
@@ -35,7 +40,7 @@ class ApiClient {
       },
     });
 
-    // Request interceptor - add token
+    // Request interceptor - add token (SSR-safe)
     this.client.interceptors.request.use(
       (config) => {
         const token = this.getToken();
@@ -47,70 +52,136 @@ class ApiClient {
       (error) => Promise.reject(error)
     );
 
-    // Response interceptor - handle errors
+    // Response interceptor - handle errors with mutex to prevent infinite refresh loops
     this.client.interceptors.response.use(
       (response) => response,
       async (error: AxiosError) => {
-        if (error.response?.status === 401) {
-          // Token expired, try to refresh
+        const originalRequest = error.config as InternalAxiosRequestConfig & { _retry?: boolean };
+
+        // Only handle 401 errors and avoid retry loops
+        if (error.response?.status === 401 && !originalRequest._retry) {
+          // If we're already refreshing, queue this request
+          if (this.isRefreshing) {
+            return new Promise((resolve) => {
+              this.refreshSubscribers.push((token: string) => {
+                if (originalRequest.headers) {
+                  originalRequest.headers.Authorization = `Bearer ${token}`;
+                }
+                resolve(this.client.request(originalRequest));
+              });
+            });
+          }
+
+          originalRequest._retry = true;
           const refreshToken = this.getRefreshToken();
-          if (refreshToken) {
-            try {
-              const response = await axios.post<TokenResponse>(
-                `${API_BASE_URL}/api/v1/auth/refresh`,
-                refreshToken,
-                { headers: { 'Content-Type': 'application/json' } }
-              );
-              this.setTokens(response.data.access_token, response.data.refresh_token);
-              // Retry original request
-              if (error.config) {
-                error.config.headers.Authorization = `Bearer ${response.data.access_token}`;
-                return this.client.request(error.config);
-              }
-            } catch (refreshError) {
-              this.clearTokens();
-              if (typeof window !== 'undefined') {
-                window.location.href = '/login';
-              }
+
+          if (!refreshToken) {
+            this.handleAuthFailure();
+            return Promise.reject(error);
+          }
+
+          this.isRefreshing = true;
+
+          try {
+            // Backend expects refresh_token as a string parameter (Body parameter, not JSON)
+            const response = await axios.post<TokenResponse>(
+              `${API_BASE_URL}/api/v1/auth/refresh`,
+              refreshToken,
+              { headers: { 'Content-Type': 'application/json' } }
+            );
+
+            this.setTokens(response.data.access_token, response.data.refresh_token);
+
+            // Retry original request
+            if (originalRequest.headers) {
+              originalRequest.headers.Authorization = `Bearer ${response.data.access_token}`;
             }
-          } else {
-            this.clearTokens();
-            if (typeof window !== 'undefined') {
-              window.location.href = '/login';
-            }
+
+            // Notify all queued requests
+            this.refreshSubscribers.forEach((callback) => callback(response.data.access_token));
+            this.refreshSubscribers = [];
+
+            return this.client.request(originalRequest);
+          } catch (refreshError) {
+            // Refresh failed - clear everything and redirect
+            this.handleAuthFailure();
+            return Promise.reject(refreshError);
+          } finally {
+            this.isRefreshing = false;
           }
         }
+
         return Promise.reject(error);
       }
     );
   }
 
+  private handleAuthFailure(): void {
+    this.clearTokens();
+    if (typeof window !== 'undefined') {
+      // Clear any persisted auth state
+      localStorage.removeItem('auth-storage');
+      // Redirect to login
+      window.location.href = '/login';
+    }
+  }
+
   private getToken(): string | null {
-    if (typeof window === 'undefined') return null;
-    return localStorage.getItem('access_token');
+    // SSR-safe: always check for window
+    if (typeof window === 'undefined') {
+      return this.token || null;
+    }
+    try {
+      return localStorage.getItem('access_token') || this.token || null;
+    } catch (e) {
+      // localStorage may be disabled
+      return this.token || null;
+    }
   }
 
   private getRefreshToken(): string | null {
-    if (typeof window === 'undefined') return null;
-    return localStorage.getItem('refresh_token');
+    // SSR-safe: always check for window
+    if (typeof window === 'undefined') {
+      return null;
+    }
+    try {
+      return localStorage.getItem('refresh_token');
+    } catch (e) {
+      // localStorage may be disabled
+      return null;
+    }
   }
 
   setTokens(accessToken: string, refreshToken?: string): void {
+    this.token = accessToken;
+    
+    // SSR-safe: only access localStorage on client
     if (typeof window !== 'undefined') {
-      localStorage.setItem('access_token', accessToken);
-      if (refreshToken) {
-        localStorage.setItem('refresh_token', refreshToken);
+      try {
+        localStorage.setItem('access_token', accessToken);
+        if (refreshToken) {
+          localStorage.setItem('refresh_token', refreshToken);
+        }
+      } catch (e) {
+        // localStorage may be disabled or full
+        console.warn('Failed to save tokens to localStorage:', e);
       }
     }
-    this.token = accessToken;
   }
 
   clearTokens(): void {
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('access_token');
-      localStorage.removeItem('refresh_token');
-    }
     this.token = null;
+    
+    // SSR-safe: only access localStorage on client
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('refresh_token');
+      } catch (e) {
+        // localStorage may be disabled
+        console.warn('Failed to clear tokens from localStorage:', e);
+      }
+    }
   }
 
   // Auth API

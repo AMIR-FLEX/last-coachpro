@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Vazirmatn', 'sans-serif'],
+        sans: ['var(--font-vazirmatn)', 'Vazirmatn', 'sans-serif'],
       },
       colors: {
         navy: {
